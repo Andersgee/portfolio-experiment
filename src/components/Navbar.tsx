@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const navItems = {
+const NAV_ITEMS = {
   "/": {
     name: "home",
   },
@@ -18,8 +18,8 @@ const navItems = {
 export function Navbar() {
   return (
     <aside className="">
-      <nav className="flex flex-row space-x-0">
-        {Object.entries(navItems).map(([path, { name }]) => {
+      <nav className="flex pb-12">
+        {Object.entries(NAV_ITEMS).map(([path, { name }]) => {
           return (
             <Link
               key={path}
