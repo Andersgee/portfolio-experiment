@@ -1,7 +1,7 @@
 {
-  "name": "edge-stack",
-  "short_name": "edge-stack",
-  "description": "Boilerplate app.",
+  "name": "portfolio-experiment",
+  "short_name": "portfolio-experiment",
+  "description": "Portfolio experiment.",
   "display": "standalone",
   "orientation": "any",
   "scope": "/",

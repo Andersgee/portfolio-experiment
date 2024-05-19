@@ -6,19 +6,23 @@ import "./globals.css";
 import { Montserrat } from "next/font/google";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://leerob.io"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_ABSURL),
   title: {
-    default: "Lee Robinson",
-    template: "%s | Lee Robinson",
+    default: "Portfolio experiment",
+    template: "%s | Portfolio experiment",
   },
   description: "Developer, writer, and creator.",
   openGraph: {
-    title: "Lee Robinson",
+    title: "Portfolio experiment",
     description: "Developer, writer, and creator.",
-    url: "https://leerob.io",
-    siteName: "Lee Robinson",
+    url: process.env.NEXT_PUBLIC_ABSURL,
+    siteName: "Portfolio experiment",
     locale: "en_US",
     type: "website",
+  },
+  twitter: {
+    title: "Portfolio experiment",
+    card: "summary_large_image",
   },
   //robots: {
   //  index: true,
@@ -30,10 +34,6 @@ export const metadata: Metadata = {
   //    "max-image-preview": "large",
   //    "max-snippet": -1,
   //  },
-  //},
-  //twitter: {
-  //  title: "Lee Robinson",
-  //  card: "summary_large_image",
   //},
   //verification: {
   //  google: "eZSdmzAXlLkKhNJzfgwDqWORghxnJ8qR9_CHdAh5-xw",

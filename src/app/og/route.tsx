@@ -21,8 +21,7 @@ export async function GET(req: NextRequest) {
           flexDirection: "column",
           alignItems: "flex-start",
           justifyContent: "center",
-          //backgroundImage: "url(https://leerob.io/og-bg.png)",
-          backgroundImage: "url(http://localhost:3000/og-bg.png)",
+          backgroundImage: `${process.env.NEXT_PUBLIC_ABSURL}/og-bg.png`,
         }}
       >
         <div
