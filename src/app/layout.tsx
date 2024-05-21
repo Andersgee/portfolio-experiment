@@ -5,7 +5,7 @@ import "./globals.css";
 //import { Inter } from "next/font/google";
 import { Montserrat } from "next/font/google";
 import Image from "next/image";
-import hero from "./hero.webp";
+import hero from "#public/images/hero.webp";
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_ABSURL),
