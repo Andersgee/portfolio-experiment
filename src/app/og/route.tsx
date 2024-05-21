@@ -9,6 +9,7 @@ export async function GET(req: NextRequest) {
   const font = fetch(new URL("../../../public/fonts/kaisei-tokumin-bold.ttf", import.meta.url)).then((res) =>
     res.arrayBuffer()
   );
+  console.log("postTitle:", postTitle);
   const fontData = await font;
 
   return new ImageResponse(
@@ -21,7 +22,7 @@ export async function GET(req: NextRequest) {
           flexDirection: "column",
           alignItems: "flex-start",
           justifyContent: "center",
-          backgroundImage: `${process.env.NEXT_PUBLIC_ABSURL}/og-bg.png`,
+          backgroundImage: `${process.env.NEXT_PUBLIC_ABSURL}/og-bg.png`, //this only works with https. (not in dev/localhost)
         }}
       >
         <div

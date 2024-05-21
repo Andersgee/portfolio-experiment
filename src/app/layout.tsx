@@ -4,6 +4,8 @@ import ScreenSizeDebug from "../components/ScreenSizeDebug";
 import "./globals.css";
 //import { Inter } from "next/font/google";
 import { Montserrat } from "next/font/google";
+import Image from "next/image";
+import hero from "./hero.webp";
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_ABSURL),
@@ -52,7 +54,14 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <html lang="en" className={fontSans.variable}>
       <body className="mx-4 mb-40 mt-8 flex max-w-2xl flex-col lg:mx-auto">
         <Navbar />
-        <main className="mt-6 flex min-w-0 flex-auto flex-col px-2">{children}</main>
+        <div className="absolute left-0 right-0 top-0 -z-50">
+          <Image
+            src={hero}
+            className="mx-auto h-96 object-cover object-bottom xl:h-[500px] dark:opacity-70 "
+            alt="blue mountains"
+          />
+        </div>
+        <div className="mt-6 flex min-w-0 flex-auto flex-col px-2">{children}</div>
         <ScreenSizeDebug />
       </body>
     </html>
