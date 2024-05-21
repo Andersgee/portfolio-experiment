@@ -1,4 +1,6 @@
-import { Kristin } from "#src/components/Kristin";
+import Image from "next/image";
+import { imageSizes } from "#src/utils/image-sizes";
+import img_kristin from "#public/images/kristin.webp";
 
 export default function Page() {
   return (
@@ -9,7 +11,12 @@ export default function Page() {
             <h1 className="mb-4 text-4xl tracking-tight text-color-neutral-800 xl:mb-8">Kristin Eklöf</h1>
             <p className="text-balance text-color-neutral-1000">Artificial Intelligence and Real World Knowledge</p>
           </div>
-          <Kristin />
+          <Image
+            src={img_kristin}
+            alt="Kristin"
+            sizes={imageSizes("w-24")}
+            className="h-auto w-24 rounded-full shadow-xl"
+          />
         </div>
       </header>
       <main className="mt-48 xl:mt-72">
