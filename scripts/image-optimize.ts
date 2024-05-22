@@ -1,7 +1,7 @@
 import sharp from "sharp";
 
-const ORIGINAL_PATH = "public/686747_173253.webp";
-const OPTIMIZED_PATH = "public/ogbg.png";
+const ORIGINAL_PATH = "src/app/open-graph-image.png";
+const OPTIMIZED_PATH = "src/app/open-graph-image-opt.png";
 
 async function main() {
   const info = await sharp(ORIGINAL_PATH)

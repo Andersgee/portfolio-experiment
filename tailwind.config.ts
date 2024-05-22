@@ -210,6 +210,8 @@ export default {
       "bounce": "bounce 1s infinite",
       "accordion-down": "accordion-down 0.2s ease-out",
       "accordion-up": "accordion-up 0.2s ease-out",
+      "fade-and-slide-in": "fade-and-slide-in both 1s cubic-bezier(0.4, 0, 0.6, 1) 1",
+      "img-fade-in": "img-fade-in both 1s cubic-bezier(0.4, 0, 0.6, 1) 1",
     },
     keyframes: {
       "spin": { to: { transform: "rotate(360deg)" } },
@@ -221,6 +223,14 @@ export default {
       },
       "accordion-down": { from: { height: "0" }, to: { height: "var(--radix-accordion-content-height)" } },
       "accordion-up": { from: { height: "var(--radix-accordion-content-height)" }, to: { height: "0" } },
+      "fade-and-slide-in": {
+        "0%": { opacity: "0", transform: "translateY(100%)" },
+        "100%": { opacity: "1", transform: "translateY(0%)" },
+      },
+      "img-fade-in": {
+        "0%": { opacity: "0" },
+        "100%": { opacity: "1" },
+      },
     },
     // UNTOUCHED BELOW HERE
     accentColor: ({ theme }) => ({

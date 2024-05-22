@@ -8,15 +8,21 @@ export default function Page() {
       <header className="">
         <div className="flex items-center justify-between">
           <div>
-            <h1 className="mb-4 text-4xl tracking-tight text-color-neutral-800 xl:mb-8">Kristin Eklöf</h1>
-            <p className="text-balance text-color-neutral-1000">Artificial Intelligence and Real World Knowledge</p>
+            <h1 className="animate-fade-and-slide-in mb-4 text-4xl tracking-tight text-color-neutral-800 xl:mb-8">
+              Kristin Eklöf
+            </h1>
+            <p className="animate-fade-and-slide-in text-balance text-color-neutral-1000 delay-300">
+              Artificial Intelligence and Real World Knowledge
+            </p>
           </div>
-          <Image
-            src={img_kristin}
-            alt="Kristin"
-            sizes={imageSizes("w-24")}
-            className="h-auto w-24 rounded-full shadow-xl"
-          />
+          <div className="animate-img-fade-in delay-1000">
+            <Image
+              src={img_kristin}
+              alt="Kristin"
+              sizes={imageSizes("w-24")}
+              className="h-auto w-24 rounded-full shadow-xl"
+            />
+          </div>
         </div>
       </header>
       <main className="mt-48 xl:mt-72">
