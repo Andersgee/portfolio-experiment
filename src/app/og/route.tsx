@@ -9,7 +9,7 @@ export async function GET(req: NextRequest) {
   const font = fetch(new URL("../../../public/fonts/kaisei-tokumin-bold.ttf", import.meta.url)).then((res) =>
     res.arrayBuffer()
   );
-  console.log("postTitle:", postTitle);
+  //console.log("postTitle:", postTitle);
   const fontData = await font;
 
   return new ImageResponse(
