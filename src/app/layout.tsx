@@ -57,6 +57,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="absolute left-0 right-0 top-0 -z-50">
           <Image
             src={hero}
+            priority
             className="mx-auto h-96 object-cover object-bottom xl:h-[500px] dark:opacity-70 "
             alt="blue mountains"
           />
