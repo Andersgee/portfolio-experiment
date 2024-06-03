@@ -1,59 +1,80 @@
-import Image from "next/image";
-import { imageSizes } from "#src/utils/image-sizes";
+import img_hero from "#public/images/kristin-hero.webp";
+import img_salboai from "#public/icons/icon-512.png";
 import img_kristin from "#public/images/kristin.webp";
-import hero from "#public/images/hero.webp";
+import img_johan from "#public/images/johan.webp";
+import { Header } from "#src/components/Header";
+import { imageSizes } from "#src/utils/image-sizes";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Page() {
   return (
     <>
-      <header className="h-72 xl:h-[400px]">
-        <div className="absolute left-0 right-0 top-0 -z-50">
+      <Header>
+        <div className="absolute left-0 right-0 top-0 -z-50 bg-color-unthemed-neutral-1000">
           <Image
-            src={hero}
+            src={img_hero}
             priority
-            className="mx-auto h-96 object-cover object-bottom xl:h-[500px] dark:opacity-70 "
+            className="mx-auto h-96 object-cover object-bottom opacity-70 xl:h-[500px]"
             alt="blue mountains"
+            placeholder="blur"
           />
         </div>
-        <div className="flex items-center justify-between">
-          <div>
-            <h1 className="mb-4 animate-fade-and-slide-in text-4xl tracking-tight text-color-neutral-800 xl:mb-8">
-              Kristin Eklöf
+        <div className="justify-betwee flex">
+          <div className="pr-4">
+            <h1 className="mb-4 animate-fade-and-slide-in text-4xl tracking-tight text-color-unthemed-neutral-300 xl:mb-8">
+              Salbo.ai
             </h1>
-            <p className="animate-fade-and-slide-in text-balance text-color-neutral-1000 delay-300">
-              Artificial Intelligence and Real World Knowledge
+            <p className="animate-fade-and-slide-in text-balance text-color-unthemed-neutral-100 delay-300">
+              Actionable insights from large and small amounts of data
             </p>
           </div>
-          <div className="animate-img-fade-in delay-1000">
-            <Image
-              src={img_kristin}
-              alt="Kristin"
-              sizes={imageSizes("w-24")}
-              className="h-auto w-24 rounded-full shadow-xl"
-            />
-          </div>
+
+          <Image
+            src={img_salboai}
+            alt="salbo.ai logo"
+            sizes={imageSizes("w-24")}
+            className="h-24 w-24 animate-img-fade-in rounded-full shadow-xl delay-1000"
+          />
         </div>
-      </header>
+      </Header>
+
       <main className="">
         <section className="pb-4">
-          <h2 className="text-2xl tracking-tighter">Section</h2>
-          <p className="">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptatum veritatis aspernatur esse
-            inventore maxime numquam rerum rem odit suscipit.
-          </p>
-        </section>
-        <article className="pb-4">
-          <h2 className="text-2xl tracking-tighter">Article</h2>
-          <p className="">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi aliquid optio veritatis iusto alias
-            voluptatem perspiciatis impedit magnam ab similique.
+          <h2 className="text-2xl tracking-tighter">About</h2>
+          <p>
+            The vision of salbo.ai is to contribute to a sustainable society by creating data-driven, fact-based
+            decision support, enabling our common assets to last longer and to be utilized more efficiently.
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus nostrum alias, magnam eligendi commodi
-            iusto quasi suscipit facere delectus distinctio labore minima neque quo libero hic perspiciatis fugit,
-            facilis at.
+            With a unique competence in advanced analytics and artificial intelligence applied to transportation,
+            infrastructure, and construction, salbo.ai creates actionable insights from large and small amounts of data.
           </p>
-        </article>
+        </section>
+        <section className="pb-4">
+          <h2 className="pb-6 text-2xl tracking-tighter">The team</h2>
+
+          <div className="flex gap-4">
+            <Link href="/kristin" className="transition-all ease-in hover:opacity-80">
+              <Image
+                src={img_kristin}
+                alt="Kristin"
+                sizes={imageSizes("w-24")}
+                className="h-auto w-24 rounded-full shadow-xl"
+              />
+              <div className="mt-2 text-center text-xl">Kristin</div>
+            </Link>
+            <Link href="/johan" className="transition-all ease-in hover:opacity-80">
+              <Image
+                src={img_johan}
+                alt="Johan"
+                sizes={imageSizes("w-24")}
+                className="h-auto w-24 rounded-full shadow-xl"
+              />
+              <div className="mt-2 text-center text-xl">Johan</div>
+            </Link>
+          </div>
+        </section>
       </main>
       <footer className="pb-4">
         <h2 className="text-2xl tracking-tighter">Footer</h2>

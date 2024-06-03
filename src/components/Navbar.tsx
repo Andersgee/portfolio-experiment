@@ -2,17 +2,14 @@ import Link from "next/link";
 
 const NAV_ITEMS = {
   "/": {
-    name: "home",
+    name: "Home",
   },
-  "/work": {
-    name: "work",
-  },
-  "/blog": {
-    name: "blog",
-  },
-  "/guestbook": {
-    name: "guestbook",
-  },
+  //  "/kristin": {
+  //    name: "Kristin",
+  //  },
+  //  "/johan": {
+  //    name: "Johan",
+  //  },
 };
 
 export function Navbar() {
@@ -23,7 +20,7 @@ export function Navbar() {
           <Link
             key={path}
             href={path}
-            className="flex px-2 py-1 align-middle text-color-neutral-1000 transition-colors hover:text-color-neutral-300 dark:hover:text-color-neutral-700"
+            className="flex px-2 py-1 align-middle text-color-unthemed-neutral-0 transition-colors hover:text-color-neutral-300 dark:hover:text-color-neutral-700"
           >
             {name}
           </Link>
