@@ -1,7 +1,7 @@
 import sharp from "sharp";
 
-const ORIGINAL_PATH = "src/app/open-graph-image.png";
-const OPTIMIZED_PATH = "src/app/open-graph-image-opt.png";
+const ORIGINAL_PATH = "src/app/opengraph-image.png";
+const OPTIMIZED_PATH = "src/app/opengraph-image-opt.png";
 
 async function main() {
   const info = await sharp(ORIGINAL_PATH)
