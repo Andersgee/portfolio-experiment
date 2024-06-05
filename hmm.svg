@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1000" width="1920" height="1080">
+<defs>
+<filter id="noise">
+ 	<feTurbulence
+   result="turbulence"
+   type="fractalNoise"
+   baseFrequency="0.102"
+   numOctaves="4"
+   seed="15"
+   stitchTiles="stitch"
+   x="0"
+   y="0"
+   width="100%"
+   height="100%"
+  />
+   
+ <feSpecularLighting
+   in="turbulence"
+   result="specularLighting"
+   surfaceScale="10"
+   specularConstant="0.75"
+   specularExponent="20"
+   lighting-color="white"
+   x="0"
+   y="0"
+   width="100%"
+   height="100%">
+     <feDistantLight azimuth="3" elevation="100"/>
+ </feSpecularLighting>  
+</filter>
+
+<filter id="blur"
+x="-20%" 
+ y="-20%" 
+ width="140%" 
+ height="140%"
+ filterUnits="objectBoundingBox"
+ primitiveUnits="userSpaceOnUse"
+ color-interpolation-filters="linearRGB"
+ >
+  <feGaussianBlur stdDeviation="15" edgeMode="duplicate" />
+</filter>
+
+
+<linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="20%" stop-opacity="1" stop-color="hsl(196.36, 63.64%, 23.73%)" />
+<stop offset="100%" stop-opacity="0.1" stop-color="hsl(188.74, 94.5%, 42.75%)" />
+</linearGradient>
+
+<linearGradient id="gradient2" x1="0%" y1="100%" x2="100%" y2="50%">
+<stop offset="30%" stop-opacity="1" stop-color="hsl(197, 78,.95%, 14.9%)" />
+<stop offset="100%" stop-opacity="0.1" stop-color="hsl(194.37, 69.57%, 27.06%)" />
+</linearGradient>
+
+<linearGradient id="gradient3" x1="50%" y1="0%" x2="50%" y2="100%">
+<stop offset="0%" stop-opacity="0.8" stop-color="hsl(197, 78,.95%, 14.9%)" />
+<stop offset="30%" stop-opacity="0.65" stop-color="hsl(197, 78,.95%, 14.9%)" />
+<stop offset="100%" stop-opacity="0" stop-color="hsl(194.37, 69.57%, 27.06%)" />
+</linearGradient>
+
+<!--
+<linearGradient id="gradient2" gradientTransform="rotate(150, 0.5, 0.5)" x1="50%" y1="0%" x2="50%" y2="100%">
+<stop offset="0%" stop-color="hsl(228.57, 84%, 4.9%)" stop-opacity="0.66"></stop>
+<stop offset="100%" stop-color="hsl(194.37, 69.57%, 27.06%)" stop-opacity="0"></stop>
+</linearGradient>
+-->
+</defs>
+
+
+<rect width="100%" height="100%" fill="hsl(228.57, 84%, 4.9%)"/>
+<rect width="100%" height="100%" fill="url(#gradient1)"/>
+<rect width="100%" height="100%" fill="url(#gradient2)"/>
+<rect width="100%" height="100%" fill="url(#gradient3)"/>
+<!--
+<g filter="url(#blurx)">
+<ellipse cx="1200" cy="600" rx="400" ry="200" opacity="0.2" fill="hsl(292.19, 84.08%, 60.59%)"/>
+</g>
+-->
+<!--
+<rect width="100%" height="100%" fill="url(#gradient2)"/>
+-->
+
+<rect filter="url(#noise)" style="mix-blend-mode: soft-light" width="100%" height="100%"/>
+
+
+</svg>
+
+
+
+<!--
+color-primary-50:  hsl(183.16, 100%, 96.27%); /* #ecfeff 98% */
+color-primary-100: hsl(185.11, 95.92%, 90.39%); /* #cffafe 94% */
+color-primary-200: hsl(186.21, 93.55%, 81.76%); /* #a5f3fc 88% */
+color-primary-300: hsl(186.99, 92.41%, 69.02%); /* #67e8f9 80% */
+color-primary-400: hsl(187.94, 85.71%, 53.33%); /* #22d3ee 71% */
+color-primary-500: hsl(188.74, 94.5%, 42.75%); /* #06b6d4 61% */
+color-primary-600: hsl(191.65, 91.4%, 36.47%); /* #0891b2 50% */
+color-primary-700: hsl(192.92, 82.28%, 30.98%); /* #0e7490 40% */
+color-primary-800: hsl(194.37, 69.57%, 27.06%); /* #155e75 33% */
+color-primary-900: hsl(196.36, 63.64%, 23.73%); /* #164e63 27% */
+color-primary-950: hsl(197, 78,.95%, 14.9%); /* #083344 18%
+
+color-accent-highlight-50:  hsl(289.09, 100%, 97.84%); /* #fdf4ff 97% */
+color-accent-highlight-100: hsl(286.96, 100%, 95.49%); /* #fae8ff 94% */
+color-accent-highlight-200: hsl(288.26, 95.83%, 90.59%); /* #f5d0fe 88% */
+color-accent-highlight-300: hsl(291.11, 93.1%, 82.94%); /* #f0abfc 80% */
+color-accent-highlight-400: hsl(292.03, 91.43%, 72.55%); /* #e879f9 70% */
+color-accent-highlight-500: hsl(292.19, 84.08%, 60.59%); /* #d946ef 60% */
+color-accent-highlight-600: hsl(293.41, 69.48%, 48.82%); /* #c026d3 51% */
+color-accent-highlight-700: hsl(294.69, 72.41%, 39.8%); /* #a21caf 43% */
+color-accent-highlight-800: hsl(295.42, 70.24%, 32.94%); /* #86198f 35% */
+color-accent-highlight-900: hsl(296.7, 63.64%, 28.04%); /* #701a75 30% */
+color-accent-highlight-950: hsl(296.76, 90.24%, 16.08%); /* #4a044e 19% */
+
+color-neutral-0:   hsl(0, 0%, 100%); /* #ffffff 100% */
+color-neutral-50:  hsl(210, 40%, 98.04%); /* #f8fafc 98% */
+color-neutral-100: hsl(210, 40%, 96.08%); /* #f1f5f9 96% */
+color-neutral-200: hsl(214.29, 31.82%, 91.37%); /* #e2e8f0 91% */
+color-neutral-300: hsl(212.73, 26.83%, 83.92%); /* #cbd5e1 83% */
+color-neutral-400: hsl(215, 20.22%, 65.1%); /* #94a3b8 63% */
+color-neutral-500: hsl(215.38, 16.32%, 46.86%); /* #64748b 45% */
+color-neutral-600: hsl(215.29, 19.32%, 34.51%); /* #475569 33% */
+color-neutral-700: hsl(215.29, 25%, 26.67%); /* #334155 25% */
+color-neutral-800: hsl(217.24, 32.58%, 17.45%); /* #1e293b 16% */
+color-neutral-900: hsl(222.22, 47.37%, 11.18%); /* #0f172a 9% */
+color-neutral-950: hsl(228.57, 84%, 4.9%); /* #020617 4% */
+color-neutral-1000: hsl(0, 0%, 0%); /* #000000 0% */
+
+-->
