@@ -1,17 +1,21 @@
-import img_hero from "#public/images/kristin-hero.webp";
-import img_salboai from "#public/icons/icon-512.png";
+//import img_hero from "#public/images/kristin-hero.webp";
+//import img_salboai from "#public/icons/icon-512.png";
 import img_kristin from "#public/images/kristin.webp";
 import img_johan from "#public/images/johan.webp";
 import { Header } from "#src/components/Header";
 import { imageSizes } from "#src/utils/image-sizes";
 import Image from "next/image";
 import Link from "next/link";
+import { HeroSvg } from "./HeroSvg";
+import { TeamSection } from "#src/components/TeamSection";
 
 export default function Page() {
   return (
     <>
       <Header>
-        <div className="absolute left-0 right-0 top-0 -z-50 bg-color-unthemed-neutral-1000">
+        <div className="absolute left-0 right-0 top-0 -z-50">
+          <HeroSvg className="mx-auto h-96 w-full max-w-[1920px] object-cover object-bottom xl:h-[500px]" />
+          {/*
           <Image
             src={img_hero}
             priority
@@ -19,6 +23,7 @@ export default function Page() {
             alt="blue mountains"
             placeholder="blur"
           />
+  */}
         </div>
         <div className="justify-betwee flex">
           <div className="pr-4">
@@ -30,12 +35,15 @@ export default function Page() {
             </p>
           </div>
 
+          <div></div>
+          {/*
           <Image
             src={img_salboai}
             alt="salbo.ai logo"
             sizes={imageSizes("w-24")}
             className="h-24 w-24 animate-img-fade-in rounded-full shadow-xl delay-1000"
           />
+  */}
         </div>
       </Header>
 
@@ -51,30 +59,7 @@ export default function Page() {
             infrastructure, and construction, salbo.ai creates actionable insights from large and small amounts of data.
           </p>
         </section>
-        <section className="pb-4">
-          <h2 className="pb-6 text-2xl tracking-tighter">The team</h2>
-
-          <div className="flex gap-4">
-            <Link href="/kristin" className="transition-all ease-in hover:opacity-80">
-              <Image
-                src={img_kristin}
-                alt="Kristin"
-                sizes={imageSizes("w-24")}
-                className="h-auto w-24 rounded-full shadow-xl"
-              />
-              <div className="mt-2 text-center text-xl">Kristin</div>
-            </Link>
-            <Link href="/johan" className="transition-all ease-in hover:opacity-80">
-              <Image
-                src={img_johan}
-                alt="Johan"
-                sizes={imageSizes("w-24")}
-                className="h-auto w-24 rounded-full shadow-xl"
-              />
-              <div className="mt-2 text-center text-xl">Johan</div>
-            </Link>
-          </div>
-        </section>
+        <TeamSection />
       </main>
       <footer className="pb-4">
         <h2 className="text-2xl tracking-tighter">Footer</h2>

@@ -1,9 +1,10 @@
 import img_avatar from "#public/images/johan.webp";
-import img_hero from "#public/images/johan-hero.webp";
+//import img_hero from "#public/images/johan-hero.webp";
 import { Header } from "#src/components/Header";
 import Image from "next/image";
 import { imageSizes } from "#src/utils/image-sizes";
 import { HeroSvg } from "./HeroSvg";
+import { TeamSection } from "#src/components/TeamSection";
 
 export default function Page() {
   return (
@@ -61,6 +62,7 @@ export default function Page() {
             facilis at.
           </p>
         </article>
+        <TeamSection />
       </main>
       <footer className="pb-4">
         <h2 className="text-2xl tracking-tighter">Footer</h2>

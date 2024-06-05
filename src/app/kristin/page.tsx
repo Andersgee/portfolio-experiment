@@ -3,12 +3,16 @@ import img_hero from "#public/images/kristin-hero.webp";
 import { Header } from "#src/components/Header";
 import Image from "next/image";
 import { imageSizes } from "#src/utils/image-sizes";
+import { HeroSvg } from "./HeroSvg";
+import { TeamSection } from "#src/components/TeamSection";
 
 export default function Page() {
   return (
     <>
       <Header>
-        <div className="absolute left-0 right-0 top-0 -z-50 bg-color-unthemed-neutral-1000">
+        <div className="absolute left-0 right-0 top-0 -z-50">
+          <HeroSvg className="mx-auto h-96 w-full max-w-[1920px] object-cover object-bottom xl:h-[500px]" />
+          {/*
           <Image
             src={img_hero}
             priority
@@ -16,6 +20,7 @@ export default function Page() {
             alt="blue mountains"
             placeholder="blur"
           />
+    */}
         </div>
         <div className="flex justify-between">
           <div className="pr-4">
@@ -58,6 +63,7 @@ export default function Page() {
             facilis at.
           </p>
         </article>
+        <TeamSection />
       </main>
       <footer className="pb-4">
         <h2 className="text-2xl tracking-tighter">Footer</h2>
