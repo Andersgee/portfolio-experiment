@@ -58,7 +58,7 @@
  <feSpecularLighting
    in="turbulence"
    result="specularLighting"
-   surfaceScale="10"
+   surfaceScale="1"
    specularConstant="0.75"
    specularExponent="20"
    lighting-color="white"
