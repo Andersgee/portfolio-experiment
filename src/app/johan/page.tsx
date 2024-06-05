@@ -3,19 +3,23 @@ import img_hero from "#public/images/johan-hero.webp";
 import { Header } from "#src/components/Header";
 import Image from "next/image";
 import { imageSizes } from "#src/utils/image-sizes";
+import { HeroSvg } from "./HeroSvg";
 
 export default function Page() {
   return (
     <>
       <Header>
-        <div className="absolute left-0 right-0 top-0 -z-50 bg-color-unthemed-neutral-1000">
+        <div className="absolute left-0 right-0 top-0 -z-50">
+          <HeroSvg className="mx-auto h-96 w-full max-w-[1920px] object-cover object-bottom xl:h-[500px]" />
+          {/*
           <Image
             src={img_hero}
             priority
-            className="blur-xs mx-auto h-96 object-cover object-bottom opacity-50 xl:h-[500px]"
+            className="mx-auto h-96 object-cover object-bottom opacity-50 blur-xs xl:h-[500px]"
             alt="svartån"
             placeholder="blur"
           />
+      */}
         </div>
         <div className="flex justify-between">
           <div className="mr-4 rounded-md p-2">
