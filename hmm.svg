@@ -26,6 +26,18 @@
   --color-primary-800: 194.37 69.57% 27.06%; /* #155e75 33% */
   --color-primary-900: 196.36 63.64% 23.73%; /* #164e63 27% */
   --color-primary-950: 197 78.95% 14.9%; /* #083344 18% */
+
+  --color-accent-highlight-50: 289.09 100% 97.84%; /* #fdf4ff 97% */
+  --color-accent-highlight-100: 286.96 100% 95.49%; /* #fae8ff 94% */
+  --color-accent-highlight-200: 288.26 95.83% 90.59%; /* #f5d0fe 88% */
+  --color-accent-highlight-300: 291.11 93.1% 82.94%; /* #f0abfc 80% */
+  --color-accent-highlight-400: 292.03 91.43% 72.55%; /* #e879f9 70% */
+  --color-accent-highlight-500: 292.19 84.08% 60.59%; /* #d946ef 60% */
+  --color-accent-highlight-600: 293.41 69.48% 48.82%; /* #c026d3 51% */
+  --color-accent-highlight-700: 294.69 72.41% 39.8%; /* #a21caf 43% */
+  --color-accent-highlight-800: 295.42 70.24% 32.94%; /* #86198f 35% */
+  --color-accent-highlight-900: 296.7 63.64% 28.04%; /* #701a75 30% */
+  --color-accent-highlight-950: 296.76 90.24% 16.08%; /* #4a044e 19% */
 }
 </style>
 <defs>
@@ -77,13 +89,13 @@ x="-20%"
 </linearGradient>
 
 <linearGradient id="gradient2" x1="0%" y1="100%" x2="100%" y2="50%">
-<stop offset="30%" stop-opacity="0.9" style="stop-color: hsl(var(--color-neutral-900))" />
-<stop offset="100%" stop-opacity="0.1" style="stop-color: hsl(var(--color-primary-700))" />
+<stop offset="30%" stop-opacity="0.9" style="stop-color: hsl(var(--color-primary-900))" />
+<stop offset="100%" stop-opacity="0.1" style="stop-color: hsl(var(--color-accent-highlight-700))" />
 </linearGradient>
 
 <linearGradient id="gradient3" x1="50%" y1="0%" x2="50%" y2="100%">
 <stop offset="0%" stop-opacity="0.8" style="stop-color: hsl(var(--color-neutral-1000))" />
-<stop offset="30%" stop-opacity="0.6" style="stop-color: hsl(var(--color-neutral-1000))" />
+<stop offset="30%" stop-opacity="0.65" style="stop-color: hsl(var(--color-neutral-1000))" />
 <stop offset="100%" stop-opacity="0" style="stop-color: hsl(var(--color-neutral-950))" />
 </linearGradient>
 
