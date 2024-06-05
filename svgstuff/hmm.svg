@@ -68,6 +68,7 @@
    height="100%">
      <feDistantLight azimuth="3" elevation="100"/>
  </feSpecularLighting>  
+ 
 </filter>
 
 <filter id="blur"
@@ -114,11 +115,11 @@ x="-20%"
 <rect width="100%" height="100%" fill="url(#gradient2)"/>
 <rect width="100%" height="100%" fill="url(#gradient3)"/>
 <!--
+<g filter="url(#blur)">
+</g>
 -->
 <!--
-<g filter="url(#blurx)">
 <ellipse cx="1200" cy="600" rx="400" ry="200" opacity="0.2" fill="hsl(292.19, 84.08%, 60.59%)"/>
-</g>
 -->
 <!--
 <rect width="100%" height="100%" fill="url(#gradient2)"/>
