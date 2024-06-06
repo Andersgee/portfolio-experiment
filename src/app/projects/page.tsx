@@ -1,8 +1,12 @@
 import { Header } from "#src/components/Header";
 import { HeroSvg } from "#src/app/HeroSvg";
 import { Navbar } from "#src/components/Navbar";
+import { getPosts } from "./content";
+import Link from "next/link";
 
 export default function Page() {
+  const posts = getPosts();
+
   return (
     <>
       <Header>
@@ -30,27 +34,27 @@ export default function Page() {
         </div>
       </Header>
       <main className="">
-        <article className="pb-4">
-          <h2 className="pb-2 text-2xl tracking-tighter">Lorem ipsum dolor sit amet consectetur.</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit maxime cupiditate doloribus obcaecati beatae
-            optio amet molestiae voluptatum repudiandae rerum.
-          </p>
-        </article>
-        <article className="pb-4">
-          <h2 className="pb-2 text-2xl tracking-tighter">Lorem, ipsum dolor.</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis ullam molestias animi sequi quaerat
-            sed.
-          </p>
-        </article>
-        <article className="pb-4">
-          <h2 className="pb-2 text-2xl tracking-tighter">Lorem ipsum dolor sit amet.</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis ullam molestias animi sequi quaerat
-            sed.
-          </p>
-        </article>
+        <section className="flex flex-col gap-2 pb-4">
+          {posts
+            .sort((a, b) => {
+              if (new Date(a.metadata.publishedAt) > new Date(b.metadata.publishedAt)) {
+                return -1;
+              }
+              return 1;
+            })
+            .map((post) => (
+              <Link
+                key={post.slug}
+                className="rounded-lg bg-color-neutral-100 px-3 py-2 transition-all ease-in hover:opacity-80"
+                href={`/projects/${post.slug}`}
+              >
+                <div>
+                  <h2>{post.metadata.title}</h2>
+                  <p>{post.metadata.summary}</p>
+                </div>
+              </Link>
+            ))}
+        </section>
       </main>
     </>
   );
