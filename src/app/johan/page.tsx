@@ -5,23 +5,32 @@ import Image from "next/image";
 import { imageSizes } from "#src/utils/image-sizes";
 import { HeroSvg } from "./HeroSvg";
 import { TeamSection } from "#src/components/TeamSection";
+import { Navbar } from "#src/components/Navbar";
+import { LinkedInLink } from "#src/components/LinkedInLink";
 
 export default function Page() {
   return (
     <>
       <Header>
+        <Navbar
+          links={[
+            { href: "/", label: "Home" },
+            { href: "/team", label: "Team" },
+          ]}
+        />
         <div className="absolute left-0 right-0 top-0 -z-50">
           <HeroSvg className="mx-auto h-96 w-full max-w-[1920px] object-cover object-bottom xl:h-[500px]" />
           {/*
           <Image
             src={img_hero}
             priority
-            className="mx-auto h-96 object-cover object-bottom opacity-50 blur-xs xl:h-[500px]"
-            alt="svartån"
+            className="mx-auto h-96 object-cover object-bottom opacity-70 xl:h-[500px]"
+            alt="blue mountains"
             placeholder="blur"
           />
-      */}
+    */}
         </div>
+
         <div className="flex justify-between">
           <div className="mr-4 rounded-md p-2">
             <h1 className="mb-4 animate-fade-and-slide-in text-4xl tracking-tight text-color-unthemed-neutral-200 xl:mb-8">
@@ -44,30 +53,22 @@ export default function Page() {
 
       <main className="">
         <section className="pb-4">
-          <h2 className="text-2xl tracking-tighter">Section</h2>
+          <h2 className="text-2xl tracking-tighter">About me</h2>
           <p className="">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptatum veritatis aspernatur esse
             inventore maxime numquam rerum rem odit suscipit.
           </p>
         </section>
-        <article className="pb-4">
-          <h2 className="text-2xl tracking-tighter">Article</h2>
-          <p className="">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi aliquid optio veritatis iusto alias
-            voluptatem perspiciatis impedit magnam ab similique.
-          </p>
+        <section className="pb-4">
+          <h2 className="text-2xl tracking-tighter">Lets chat</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus nostrum alias, magnam eligendi commodi
-            iusto quasi suscipit facere delectus distinctio labore minima neque quo libero hic perspiciatis fugit,
-            facilis at.
+            Find me on social media or at <code>johan@salbo.ai</code>
           </p>
-        </article>
-        <TeamSection />
+          <div className="flex">
+            <LinkedInLink href="https://www.linkedin.com/in/johaneklo" />
+          </div>
+        </section>
       </main>
-      <footer className="pb-4">
-        <h2 className="text-2xl tracking-tighter">Footer</h2>
-        <p className="">footer</p>
-      </footer>
     </>
   );
 }

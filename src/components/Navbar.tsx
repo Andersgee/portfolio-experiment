@@ -1,28 +1,19 @@
 import Link from "next/link";
 
-const NAV_ITEMS = {
-  "/": {
-    name: "Home",
-  },
-  //  "/kristin": {
-  //    name: "Kristin",
-  //  },
-  //  "/johan": {
-  //    name: "Johan",
-  //  },
+type Props = {
+  links: { href: string; label: string }[];
 };
-
-export function Navbar() {
+export function Navbar({ links }: Props) {
   return (
-    <nav className="flex pb-12">
-      {Object.entries(NAV_ITEMS).map(([path, { name }]) => {
+    <nav className="mb-20 flex gap-2">
+      {links.map(({ href, label }) => {
         return (
           <Link
-            key={path}
-            href={path}
+            key={label}
+            href={href}
             className="flex px-2 py-1 align-middle text-color-unthemed-neutral-0 transition-colors hover:text-color-neutral-300 dark:hover:text-color-neutral-700"
           >
-            {name}
+            {label}
           </Link>
         );
       })}

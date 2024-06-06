@@ -3,5 +3,5 @@ type Props = {
 };
 
 export function Header(props: Props) {
-  return <header className="h-72 xl:h-[400px]">{props.children}</header>;
+  return <header className="h-[380px] xl:h-[500px]">{props.children}</header>;
 }

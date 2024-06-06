@@ -5,11 +5,19 @@ import Image from "next/image";
 import { imageSizes } from "#src/utils/image-sizes";
 import { HeroSvg } from "./HeroSvg";
 import { TeamSection } from "#src/components/TeamSection";
+import { Navbar } from "#src/components/Navbar";
+import { LinkedInLink } from "#src/components/LinkedInLink";
 
 export default function Page() {
   return (
     <>
       <Header>
+        <Navbar
+          links={[
+            { href: "/", label: "Home" },
+            { href: "/team", label: "Team" },
+          ]}
+        />
         <div className="absolute left-0 right-0 top-0 -z-50">
           <HeroSvg className="mx-auto h-96 w-full max-w-[1920px] object-cover object-bottom xl:h-[500px]" />
           {/*
@@ -43,32 +51,23 @@ export default function Page() {
       </Header>
       <main className="">
         <section className="pb-4">
-          <h2 className="text-2xl tracking-tighter">Section</h2>
+          <h2 className="text-2xl tracking-tighter">About me</h2>
           <p>
             I am passionate about extracting valuable insights from data and to bridge the gap between data and
             business. I believe that artificial intelligence needs hands-on real world knowledge to be efficient - and I
             aim to combine the best of both worlds.
           </p>
-          <p>https://www.linkedin.com/in/kristin-ekl%C3%B6f-46ab97a8/</p>
         </section>
-        <article className="pb-4">
-          <h2 className="text-2xl tracking-tighter">Article</h2>
-          <p className="">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi aliquid optio veritatis iusto alias
-            voluptatem perspiciatis impedit magnam ab similique.
-          </p>
+        <section className="pb-4">
+          <h2 className="text-2xl tracking-tighter">Lets chat</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus nostrum alias, magnam eligendi commodi
-            iusto quasi suscipit facere delectus distinctio labore minima neque quo libero hic perspiciatis fugit,
-            facilis at.
+            Find me on social media or at <code>kristin@salbo.ai</code>
           </p>
-        </article>
-        <TeamSection />
+          <div className="flex">
+            <LinkedInLink href="https://www.linkedin.com/in/kristin-ekl%C3%B6f-46ab97a8" />
+          </div>
+        </section>
       </main>
-      <footer className="pb-4">
-        <h2 className="text-2xl tracking-tighter">Footer</h2>
-        <p className="">footer</p>
-      </footer>
     </>
   );
 }
