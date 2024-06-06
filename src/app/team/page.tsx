@@ -12,7 +12,13 @@ export default function Page() {
   return (
     <>
       <Header>
-        <Navbar links={[{ href: "/", label: "Home" }]} />
+        <Navbar
+          links={[
+            { href: "/", label: "Home" },
+            { href: "/team", label: "Meet the Team" },
+            { href: "/projects", label: "Projects" },
+          ]}
+        />
         <div className="absolute left-0 right-0 top-0 -z-50">
           <HeroSvg className="mx-auto h-96 w-full max-w-[1920px] object-cover object-bottom xl:h-[500px]" />
         </div>
@@ -32,6 +38,7 @@ export default function Page() {
       <main className="">
         <section className="pb-4">
           <h2 className="pb-6 text-2xl tracking-tighter">The team</h2>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa, facilis.</p>
           <div className="flex gap-4">
             <Link href="/kristin" className="transition-all ease-in hover:opacity-80">
               <Image

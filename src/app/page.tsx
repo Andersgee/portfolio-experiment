@@ -13,7 +13,13 @@ export default function Page() {
   return (
     <>
       <Header>
-        <Navbar links={[{ href: "/team", label: "Meet the Team" }]} />
+        <Navbar
+          links={[
+            { href: "/", label: "Home" },
+            { href: "/team", label: "Meet the Team" },
+            { href: "/projects", label: "Projects" },
+          ]}
+        />
         <div className="absolute left-0 right-0 top-0 -z-50">
           <HeroSvg className="mx-auto h-96 w-full max-w-[1920px] object-cover object-bottom xl:h-[500px]" />
           {/*

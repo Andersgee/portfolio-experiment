@@ -15,7 +15,8 @@ export default function Page() {
         <Navbar
           links={[
             { href: "/", label: "Home" },
-            { href: "/team", label: "Team" },
+            { href: "/team", label: "Meet the Team" },
+            { href: "/projects", label: "Projects" },
           ]}
         />
         <div className="absolute left-0 right-0 top-0 -z-50">
