@@ -54,7 +54,7 @@ export function HeroSvg({ className }: Props) {
         </filter>
 
         <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="20%" stopOpacity="0.75" className="[stop-color:hsl(var(--color-neutral-950))]" />
+          <stop offset="20%" stopOpacity="0.75" className="[stop-color:#020617]" />
           <stop offset="100%" stopOpacity="0.1" className="[stop-color:#c026d3]" />
         </linearGradient>
 
@@ -64,9 +64,9 @@ export function HeroSvg({ className }: Props) {
         </linearGradient>
 
         <linearGradient id="gradient3" x1="50%" y1="0%" x2="75%" y2="100%">
-          <stop offset="0%" stopOpacity="0.8" className="[stop-color:hsl(var(--color-neutral-1000))]" />
-          <stop offset="30%" stopOpacity="0.65" className="[stop-color:hsl(var(--color-neutral-1000))]" />
-          <stop offset="100%" stopOpacity="0" className="[stop-color:hsl(var(--color-neutral-950))]" />
+          <stop offset="0%" stopOpacity="0.8" className="[stop-color:#000000]" />
+          <stop offset="30%" stopOpacity="0.65" className="[stop-color:#000000]" />
+          <stop offset="100%" stopOpacity="0" className="[stop-color:#020617]" />
         </linearGradient>
       </defs>
 

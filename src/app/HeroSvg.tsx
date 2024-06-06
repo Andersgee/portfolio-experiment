@@ -54,19 +54,19 @@ export function HeroSvg({ className }: Props) {
         </filter>
 
         <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="20%" stopOpacity="0.75" className="[stop-color:hsl(var(--color-neutral-950))]" />
-          <stop offset="100%" stopOpacity="0.1" className="[stop-color:hsl(var(--color-primary-600))]" />
+          <stop offset="20%" stopOpacity="0.75" className="[stop-color:#020617]" />
+          <stop offset="100%" stopOpacity="0.1" className="[stop-color:#0891b2]" />
         </linearGradient>
 
         <linearGradient id="gradient2" x1="0%" y1="100%" x2="100%" y2="50%">
-          <stop offset="30%" stopOpacity="0.9" className="[stop-color:hsl(var(--color-primary-900))]" />
-          <stop offset="100%" stopOpacity="0.1" className="[stop-color:hsl(var(--color-accent-highlight-700))]" />
+          <stop offset="30%" stopOpacity="0.9" className="[stop-color:#164e63]" />
+          <stop offset="100%" stopOpacity="0.1" className="[stop-color:#a21caf]" />
         </linearGradient>
 
         <linearGradient id="gradient3" x1="50%" y1="0%" x2="75%" y2="100%">
-          <stop offset="0%" stopOpacity="0.8" className="[stop-color:hsl(var(--color-neutral-1000))]" />
-          <stop offset="30%" stopOpacity="0.65" className="[stop-color:hsl(var(--color-neutral-1000))]" />
-          <stop offset="100%" stopOpacity="0" className="[stop-color:hsl(var(--color-neutral-950))]" />
+          <stop offset="0%" stopOpacity="0.8" className="[stop-color:#000000]" />
+          <stop offset="30%" stopOpacity="0.65" className="[stop-color:#000000]" />
+          <stop offset="100%" stopOpacity="0" className="[stop-color:#020617]" />
         </linearGradient>
       </defs>
 
@@ -74,7 +74,7 @@ export function HeroSvg({ className }: Props) {
       <rect width="100%" height="100%" fill="url(#gradient1)" />
       <rect width="100%" height="100%" fill="url(#gradient2)" />
       <rect width="100%" height="100%" fill="url(#gradient3)" />
-      <rect filter="url(#noise)" className="mix-blend-soft-light" width="100%" height="100%" />
+      <rect filter="url(#noise)" className="mix-blend-soft-light" opacity="1" width="100%" height="100%" />
     </svg>
   );
 }
