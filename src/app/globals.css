@@ -233,14 +233,25 @@
   }
   */
 
-  .mdx > ol {
+  .mdx ol {
     @apply list-inside list-decimal;
   }
-  .mdx > ul {
+  .mdx ul {
     @apply list-inside list-disc;
   }
 
-  .mdx > h3 {
+  .mdx h3 {
     @apply text-base text-color-neutral-1000;
+  }
+
+  .mdx code {
+    @apply px-1;
+  }
+
+  .mdx pre {
+    @apply block w-full;
+  }
+  .mdx pre > code {
+    @apply p-0;
   }
 }
