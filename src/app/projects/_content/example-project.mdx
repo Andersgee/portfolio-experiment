@@ -1,40 +1,32 @@
 ---
 title: "Example project"
-publishedAt: "2023-01-25"
-summary: "An overview of databases that pair well with modern application and compute providers."
+publishedAt: "2024-06-07"
+summary: "A one or two sentence summary of example project"
 image: "/images/kristin.webp"
 ---
 
-## Some h2 heading
+## Some heading
 
-some <a href="/projects/another-example-project">internal link</a> and <a href="https://www.google.com">some external link</a>
+Lorem, ipsum dolor sit amet consectetur adipisicing elit. Here is some <a href="/projects/another-example-project">internal link</a> and <a href="https://www.google.com">some external link</a>
 
-## another h2 heading
+## Another heading
 
-some **bold text**
+Lorem, ipsum dolor sit amet consectetur adipisicing elit. Some **bold text** and some _italic text_
 
-1. Services that work exceptionally well when paired with serverless and edge compute
-2. Services that work with JavaScript and TypeScript codebases
+### Some subheading
 
-> **Disclaimer:** I work at Vercel, which partners with companies in this post. I also have personally used many of these tools for my own personal projects. My site currently uses PlanetScale and I'm also an angel investor in Supabase (mentioned below).
+this is how to insert an image
 
-## A new programming model
+<Image src="/images/kristin.webp" alt="Kristin profile" width={100} height={100} />
 
-Relational databases have been around for 25+ years.
+Here is an ordered list
 
-While there are new companies creating _serverless-first_ storage solutions, a new programming model is required for workloads to be compatible with serverless compute and modern runtimes.
+1. lorem
+2. ipsum
 
-These solutions must be:
+Here is an un-ordered list
 
-- **Connectionless:** Developers don't want to think about manual connection management. Traditional database protocols are stateful, whereas HTTP is mostly stateless, making it easier to use with scale to zero compute. Exposed through an SDK or HTTP API, “connectionless” solutions provide an **abstraction over connection pooling**.
-- **Web native:** Browser data-fetching APIs (e.g. Web `fetch`) and protocols are eating the world. New databases use HTTP APIs or WebSockets, rather than opening direct connections to the database. This makes them compatible with all forms of compute (including the lighter runtime used in edge compute).
-- **Lightweight:** Client libraries (and drivers) are becoming thin. Complexity is shifting to the database vendor, taking on the burden as part of their global infrastructure. For example, their gateway might handle connection pooling or provide caching infrastructure. This has led to a new wave of ORMs (i.e. abstractions to query data) both as standalone libraries and as integrated database SDKs.
-- **(Bonus) Type-safe:** TypeScript developers are favoring databases or libraries which provide tooling to enable type-safe access to your data. For example: [Prisma](https://www.prisma.io/), [Kysely](https://github.com/koskimas/kysely), [Drizzle](https://github.com/drizzle-team/drizzle-orm), [Contentlayer](https://www.contentlayer.dev/), and [Zapatos](https://jawj.github.io/zapatos/).
+- lorem
+- ipsum
 
-Consider databases like Postgres. New solutions like Neon and Supabase abstract connection management, providing you with a simple way to query and mutate data. In the case of Supabase, there's a client library that uses an HTTP API [built on PostgREST](https://supabase.com/docs/guides/api):
-
-```jsx
-import { createClient } from "@supabase/supabase-js";
-let supabase = createClient("https://<project>.supabase.co", "<your-anon-key>");
-let { data } = await supabase.from("countries").select();
-```
+and some inline code `const hello = 2`

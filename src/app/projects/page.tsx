@@ -34,7 +34,7 @@ export default function Page() {
         </div>
       </Header>
       <main className="">
-        <section className="flex flex-col gap-2 pb-4">
+        <section className="flex flex-col gap-4 pb-4">
           {posts
             .sort((a, b) => {
               if (new Date(a.metadata.publishedAt) > new Date(b.metadata.publishedAt)) {

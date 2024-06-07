@@ -162,7 +162,7 @@ export default function Page({ params }: Props) {
   */}
         </div>
       </Header>
-      <article className="prose prose-quoteless prose-neutral dark:prose-invert">
+      <article className="mdx">
         <CustomMDX source={post.content} />
       </article>
     </div>
